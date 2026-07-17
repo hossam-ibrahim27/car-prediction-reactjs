@@ -35,7 +35,7 @@ predict-frontend/
 ├── tsconfig.json           # TypeScript configuration
 └── vite.config.ts          # Vite build tools configuration
 
----
+```
 
 ## 🛠️ Tech Stack & Architecture
 
