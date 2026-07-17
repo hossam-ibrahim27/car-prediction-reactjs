@@ -44,6 +44,7 @@ predict-frontend/
  │   User Input Form    │ ────>  │  Axios Service Layer  │ ────>  │ FastAPI ML Backend   │
  │ (React 18 + Tailwind)│        │(Type-safe HTTP Client)│        │  (Cloud Prediction)  │
  └──────────────────────┘        └───────────────────────┘        └──────────────────────┘
+ ```
 
 ### 1. User Interface & Styling
 * **React 19:** Functional components with custom hooks for modular UI development and modern rendering features.
