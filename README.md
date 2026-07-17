@@ -1,81 +1,69 @@
-<<<<<<< HEAD
-# -car-prediction-reactjs
-=======
-# React + TypeScript + Vite
+# 🚗 Car Price Prediction — Frontend UI Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19.0-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-1.6-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 
-Currently, two official plugins are available:
+An interactive, responsive single-page web application built with **React**, **TypeScript**, and **Tailwind CSS**. It provides an intuitive interface for users to enter car specifications and receive real-time price predictions powered by an asynchronous **FastAPI** Machine Learning backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🔗 Live Services & Links
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* 🌐 **Frontend Live App:** [https://car-prediction-reactjs.vercel.app](https://car-prediction-reactjs.vercel.app/)
+* ⚙️ **Connected Backend API Docs:** [Swagger Documentation](https://car-prediction-backend-production.up.railway.app/docs)
+* 📦 **Full System Repository:** [Car Prediction Full Project](https://github.com/hossam-ibrahim27/car-prediction-full-project)
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 📁 Repository Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```text
+predict-frontend/
+├── 📁 public/              # Static assets & icons
+├── 📁 src/
+│   ├── 📁 components/      # Reusable UI components & form inputs
+│   ├── 📁 services/        # Axios API client & endpoints setup
+│   ├── 📁 types/           # TypeScript interfaces & type definitions
+│   ├── App.tsx             # Main layout & form application state
+│   └── main.tsx            # Application entry point
+├── eslint.config.js        # Linting rules & code quality configuration
+├── index.html              # HTML template
+├── package.json            # Dependencies & scripts
+├── tsconfig.json           # TypeScript configuration
+└── vite.config.ts          # Vite build tools configuration
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack & Architecture
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+ ┌──────────────────────┐        ┌───────────────────────┐        ┌──────────────────────┐
+ │   User Input Form    │ ────>  │  Axios Service Layer  │ ────>  │ FastAPI ML Backend   │
+ │ (React 18 + Tailwind)│        │(Type-safe HTTP Client)│        │  (Cloud Prediction)  │
+ └──────────────────────┘        └───────────────────────┘        └──────────────────────┘
 
-```
+### 1. User Interface & Styling
+* **React 19:** Functional components with custom hooks for modular UI development and modern rendering features.
+* **Tailwind CSS:** Modern, utility-first CSS framework for responsive layout design.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Type Safety & Tooling
+* **TypeScript:** Strict type checks for form states, input validation, and API payload schemas.
+* **Vite:** Next-generation frontend build tool providing lightning-fast Hot Module Replacement (HMR).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. API Integration & State Management
+* **Axios:** Handles real-time asynchronous HTTP requests to the FastAPI prediction endpoint.
+* **Form State:** Manages vehicle parameters (Brand, Model, Year, Mileage, Fuel Type, etc.) before payload submission.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
->>>>>>> 4d03ea4 (initial commit)
+
+## 🔒 License & Intellectual Property
+
+Copyright (c) 2026 Hossam Ibrahim. All Rights Reserved.
+
+This repository and its source code are published for showcase, code review, and portfolio evaluation purposes only. No part of this software may be copied, modified, distributed, or used for commercial purposes without prior written permission from the owner.
+
+ 
